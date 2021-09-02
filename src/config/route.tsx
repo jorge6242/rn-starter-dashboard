@@ -1,21 +1,18 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {Header} from 'react-native-elements';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import sitemap from '../route/sitemap';
+import Main from '../screens/Main';
+
+const {Screen, Navigator} = createStackNavigator();
 
 const Route = (): JSX.Element => {
   return (
-    <View>
-      <Header
-        leftComponent={{
-          icon: 'menu',
-          color: '#fff',
-          iconStyle: {color: '#fff'},
-        }}
-        centerComponent={{text: 'MY TITLE', style: {color: '#fff'}}}
-        rightComponent={{icon: 'home', color: '#fff'}}
-      />
-      <Text style={{textAlign: 'center'}}>Route Component</Text>
-    </View>
+    <NavigationContainer>
+      <Navigator screenOptions={{headerShown: false}}>
+        <Screen name={sitemap.main} component={Main} />
+      </Navigator>
+    </NavigationContainer>
   );
 };
 
