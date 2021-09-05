@@ -1,8 +1,8 @@
 import React from 'react';
 import {DrawerNavigationProp} from '@react-navigation/drawer';
 import {Text} from 'react-native';
-import Header from '../../components/Header';
-import MainLayout from '../../hoc/MainLayout';
+import Header from '@src/components/Header';
+import MainLayout from '@src/hoc/MainLayout';
 
 interface IProps {
   navigation: DrawerNavigationProp<any>;

@@ -38,6 +38,12 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
         style={Styles.drawerItem}
         onPress={() => handleNavigation(sitemap.product)}
       />
+      <DrawerItem
+        label="Logout"
+        labelStyle={Styles.labelItem}
+        style={Styles.drawerItem}
+        onPress={() => handleNavigation(sitemap.login)}
+      />
     </DrawerContentScrollView>
   );
 };
